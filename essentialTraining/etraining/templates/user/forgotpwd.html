@@ -1,0 +1,30 @@
+{% extends "user/auth_base.html" %}
+{% block changing %}
+
+<div class="signupBox" style="margin-top: 200px; margin-bottom: 200px;">
+
+	<section class="signup">
+		<!-- <img src="images/signup-bg.jpg" alt=""> -->
+		<div class="container">
+			<div class="signup-content mt-5">
+				<form method="POST" id="reset_pwd" class="signup-form">
+					<h2 class="form-title" style="color: #F28123;">Password Reset</h2>
+			
+					<div class="form-group">
+						<input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
+					</div>
+
+					<div class="form-group">
+						<input type="submit" name="submit" id="submit" class="form-submit text-white" value="Send"/>
+					</div>
+				</form>
+				<p class="loginhere">
+					Be sure to use an already registered email address.
+				</p>
+			</div>
+		</div>
+	</section>
+
+</div>
+
+{% endblock changing %}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Email Verification</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='authentication/css/bootstrap-grid.min.css')}}">
+
+   
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='authentication/css/style.css')}}">
+    <!-- favicon -->
+	<!-- <link rel="shortcut icon" type="image/png" href="../img/favicon.png"> -->
+	<!-- google font -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap" rel="stylesheet">
+	<!-- fontawesome -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/all.min.css')}}">
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='bootstrap/css/bootstrap.min.css')}}">
+	<!-- owl carousel -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/owl.carousel.css')}}">
+	<!-- magnific popup -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/magnific-popup.css')}}">
+	<!-- animate css -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/animate.css')}}">
+	<!-- mean menu css -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/meanmenu.min.css')}}">
+	<!-- main style -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css')}}">
+	<!-- responsive -->
+	<link rel="stylesheet" href="{{ url_for('static',filename='css/responsive.css')}}">
+</head>
+<body>
+
+    <!-- JS -->
+    <script src="{{ url_for('static',filename='authentication/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='authentication/vendor/jquery/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static',filename='authentication/js/main.js') }}"></script>
+
+    <!-- General JS Files -->
+    <!-- jquery -->
+	<script src="{{ url_for('static',filename='js/jquery-1.11.3.min.js') }}"></script>
+	<!-- bootstrap -->
+	<script src="{{ url_for('static',filename='bootstrap/js/bootstrap.min.js') }}"></script>
+	<!-- count down -->
+	<script src="{{ url_for('static',filename='js/jquery.countdown.js') }}"></script>
+	<!-- isotope -->
+	<script src="{{ url_for('static',filename='js/jquery.isotope-3.0.6.min.js') }}"></script>
+	<!-- waypoints -->
+	<script src="{{ url_for('static',filename='js/waypoints.js') }}"></script>
+	<!-- owl carousel -->
+	<script src="{{ url_for('static',filename='js/owl.carousel.min.js') }}"></script>
+	<!-- magnific popup -->
+	<script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js') }}"></script>
+	<!-- mean menu -->
+	<script src="{{ url_for('static',filename='js/jquery.meanmenu.min.js') }}"></script>
+	<!-- sticker js -->
+	<script src="{{ url_for('static',filename='js/sticker.js') }}"></script>
+	<!-- main js -->
+	<script src="{{ url_for('static',filename='js/main.js') }}"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script>
+            $(document).ready(function(){
+
+                swal({
+                        title: "Verification Successful!",
+                        text: "Click ok to login",
+                        icon: "success",
+                    }).then(function() {
+                        window.location = "login.html";
+                    });
+            });
+    </script>
+
+</body>
+</html>
