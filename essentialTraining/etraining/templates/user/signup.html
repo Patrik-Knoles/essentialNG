@@ -1,230 +1,238 @@
-{% extends "user/auth_base.html" %}
-{% block changing %}
+	{% extends "user/auth_base.html" %}
+	{% block changing %}
 
-<div class="signupBox">
+    <div class="signupBox" style="margin-top: 200px;">
 
-	<section class="signup">
-		<!-- <img src="images/signup-bg.jpg" alt=""> -->
-		<div class="container">
-			<div class="">
-				<!-- <form method="POST" id="signup-form" class="signup-form needs-validation">
-					<h2 class="form-title" style="color: #F28123;">Create account</h2>
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="">
+                    <!-- <form method="POST" id="signup-form" class="signup-form needs-validation">
+                        <h2 class="form-title" style="color: #F28123;">Create account</h2>
 
-					<div class="row justify-content-between">
-						<div class="col-md-6 form-group">
-							<input type="text" class="form-input" name="fistName" id="firstName" placeholder="First Name"/>
-						</div>
-						<div class="col-md-6 form-group">
-							<input type="text" class="form-input" name="lastName" id="lastName" placeholder="Last Name"/>
-						</div>
-					</div>
-			
-					<div class="form-group">
-						<input type="number" class="form-input" name="phone" id="name" placeholder="Phone number"/>
-					</div>
-					<div class="form-group">
-						<input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
-					</div>
-					<div class="form-group">
-						<textarea class="form-input" name="address" id="address" placeholder="Your Address"></textarea>
-					</div>
-					<div class="form-group">
-						<input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
-						<span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-					</div>
-					<div class="form-group">
-						<input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"/>
-					</div>
-					<div class="form-group">
-						<select name="gender" class="form-input" id="gender">
-							<option value="">--Select Gender--</option>
-							<option value="Male">Male</option>
-							<option value="Female">Female</option>
-							<option value="Other">Other</option>
-						</select>
-					</div>
-					<div class="form-group">
-						<input type="date" class="form-input" name="re_password" id="re_password" placeholder=""/>
-					</div>
-					<div class="form-group">
-						<input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-						<label for="agree-term" class="label-agree-term">
-							<span>
-								<span></span>
-							</span>I agree all statements in  <a href="#" class="term-service">Terms of service</a>
-						</label>
-					</div>
-					<div class="form-group">
-						<input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
-					</div>
-				</form>
-				<p class="loginhere">
-					Have already an account ? <a href="login.html" class="loginhere-link">Login here</a>
-				</p> -->
-				
-				<!-- Sign Up Form Starts -->
-				<div>
-					<h1 class="">Get Started</h1>
-					<div id="multi-step-form-container">
-						<!-- Form Steps / Progress Bar -->
-						<ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
-							<!-- Step 1 -->
-							<li class="form-stepper-active text-center form-stepper-list" step="1">
-								<a class="mx-2">
-									<span class="form-stepper-circle">
-										<span>1</span>
-									</span>
-									<div class="label">Personal Details</div>
-								</a>
-							</li>
-							<!-- Step 2 -->
-							<li class="form-stepper-unfinished text-center form-stepper-list" step="2">
-								<a class="mx-2">
-									<span class="form-stepper-circle text-muted">
-										<span>2</span>
-									</span>
-									<div class="label text-muted">Primary Skill</div>
-								</a>
-							</li>
-							<!-- Step 3 -->
-							<li class="form-stepper-unfinished text-center form-stepper-list" step="3">
-								<a class="mx-2">
-									<span class="form-stepper-circle text-muted">
-										<span>3</span>
-									</span>
-									<div class="label text-muted">More about you</div>
-								</a>
-							</li>
-						</ul>
-						<!-- Step Wise Form Content -->
-						<form id="userAccountSetupForm" class="signup-form needs-validation" name="userAccountSetupForm" enctype="multipart/form-data" method="POST">
-							<!-- Step 1 Content -->
-							<section id="step-1" class="form-step">
-								<h2 class="font-normal"><i class="orange-text">Personal</i> Details</h2>
-								<!-- Step 1 input fields -->
-								<div class="row justify-content-between">
-									<div class="col-md-6 form-group">
-										<input type="text" class="form-input" name="fistName" id="firstName" placeholder="First Name" required/>
-									</div>
-									<div class="col-md-6 form-group">
-										<input type="text" class="form-input" name="lastName" id="lastName" placeholder="Last Name"/>
-									</div>
-								</div>
-								<div class="form-group">
-									<input type="number" class="form-input" name="phone" id="name" placeholder="Phone number"/>
-								</div>
-								<div class="form-group">
-									<input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
-								</div>
-								<div class="form-group">
-									<textarea class="form-input" name="address" id="address" placeholder="Your Address"></textarea>
-								</div>
-								<div class="form-group">
-									<input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
-									<span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
-								</div>
-								<div class="form-group">
-									<input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"/>
-								</div>
-								<div class="form-group">
-									<select name="gender" class="form-input" id="gender">
-										<option value="">--Select Gender--</option>
-										<option value="Male">Male</option>
-										<option value="Female">Female</option>
-										<option value="Other">Other</option>
-									</select>
-								</div>
-								<div class="form-group">
-									<input type="date" class="form-input" name="re_password" id="re_password" placeholder=""/>
-								</div>
-								<div class="form-group">
-									<input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
-									<label for="agree-term" class="label-agree-term">
-										<span>
-											<span></span>
-										</span>I agree all statements in  <a href="#" class="term-service">Terms of service</a>
-									</label>
-								</div>
-								<div class="mt-3">
-									<button class="button btn-navigate-form-step" type="button" step_number="2">Next</button>
-								</div>
-							</section>
-							<!-- Step 2 Content, default hidden on page load. -->
-							<section id="step-2" class="form-step d-none">
-								<h2 class="font-normal">Select your <i class="orange-text">primary</i> skill</h2>
-								<!-- Step 2 input fields -->
-								<div class="mt-3">
-									<div class="form-group">
-										<select name="skill" class="form-input" id="gender">
-											<option value="">--Select a Skill--</option>
-											<option value="software">Software Developer</option>
-											<option value="caterer">Caterer</option>
-											<option value="carpenter">Carpenter</option>
-											<option value="driver">Driver</option>
-											<option value="tailor">Tailor</option>
-											<option value="trader">Trader</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<h5 class="mb-3">Years of <i class="orange-text">experience</i> with this skill</h5>
-										<div class="form-radio">
-											<input type="radio" name="experience_level" value="newbie" id="newbie" checked="checked" />
-											<label for="newbie">< 1 year</label>
+                        <div class="row justify-content-between">
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-input" name="fistName" id="firstName" placeholder="First Name"/>
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <input type="text" class="form-input" name="lastName" id="lastName" placeholder="Last Name"/>
+                            </div>
+                        </div>
+                
+                        <div class="form-group">
+                            <input type="number" class="form-input" name="phone" id="name" placeholder="Phone number"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-input" name="address" id="address" placeholder="Your Address"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="password" id="password" placeholder="Password"/>
+                            <span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"/>
+                        </div>
+                        <div class="form-group">
+                            <select name="gender" class="form-input" id="gender">
+                                <option value="">--Select Gender--</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" class="form-input" name="re_password" id="re_password" placeholder=""/>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term">
+                                <span>
+                                    <span></span>
+                                </span>I agree all statements in  <a href="#" class="term-service">Terms of service</a>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="submit" class="form-submit" value="Sign up"/>
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        Have already an account ? <a href="login.html" class="loginhere-link">Login here</a>
+                    </p> -->
 					
-											<input type="radio" name="experience_level" value="average" id="average"/>
-											<label for="average">2-5 years</label>
+					<!-- Sign Up Form Starts -->
+					<div>
+						<h1 class="">Get Started</h1>
+						<div id="multi-step-form-container">
+							<!-- Form Steps / Progress Bar -->
+							<ul class="form-stepper form-stepper-horizontal text-center mx-auto pl-0">
+								<!-- Step 1 -->
+								<li class="form-stepper-active text-center form-stepper-list" step="1">
+									<a class="mx-2">
+										<span class="form-stepper-circle">
+											<span>1</span>
+										</span>
+										<div class="label">Personal Details</div>
+									</a>
+								</li>
+								<!-- Step 2 -->
+								<li class="form-stepper-unfinished text-center form-stepper-list" step="2">
+									<a class="mx-2">
+										<span class="form-stepper-circle text-muted">
+											<span>2</span>
+										</span>
+										<div class="label text-muted">Primary Skill</div>
+									</a>
+								</li>
+								<!-- Step 3 -->
+								<li class="form-stepper-unfinished text-center form-stepper-list" step="3">
+									<a class="mx-2">
+										<span class="form-stepper-circle text-muted">
+											<span>3</span>
+										</span>
+										<div class="label text-muted">More about you</div>
+									</a>
+								</li>
+							</ul>
+							<!-- Step Wise Form Content -->
+							<form onsubmit="return validateForm()" id="userAccountSetupForm" class="signup-form needs-validation" name="userAccountSetupForm" enctype="multipart/form-data" method="POST" action="/signing/">
+								<!-- csrf token -->
+								<input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
 
-											<input type="radio" name="experience_level" value="master" id="master" class="mt-2"/>
-											<label for="master">> 6 years</label>
+								<!-- Step 1 Content -->
+								<section id="step-1" class="form-step">
+									<h2 class="font-normal"><i class="orange-text">Personal</i> Details</h2>
+									<!-- Step 1 input fields -->
+									<div class="row justify-content-between">
+										<div class="col-md-6 form-group">
+											<input type="text" class="form-input" name="firstName" id="firstName" placeholder="First Name" required/>
+										</div>
+										<div class="col-md-6 form-group">
+											<input type="text" class="form-input" name="lastName" id="lastName" placeholder="Last Name"/>
 										</div>
 									</div>
-								</div>
-								<div class="mt-3">
-									<button class="button btn-navigate-form-step" type="button" step_number="1">Prev</button>
-									<button class="button btn-navigate-form-step" type="button" step_number="3">Next</button>
-								</div>
-							</section>
-							<!-- Step 3 Content, default hidden on page load. -->
-							<section id="step-3" class="form-step d-none">
-								<h2 class="font-normal">More about you</h2>
-								<!-- Step 3 input fields -->
-								<div class="mt-3">
 									<div class="form-group">
-										<label class="mb-3">English Proficiency</label>
-										<select name="skill" class="form-input form-select" id="gender">
-											<option value="">--Select--</option>
-											<option value="native">Native</option>
-											<option value="advanced">Advanced</option>
-											<option value="intermediate">Intermediate</option>
-											<option value="beginner">Beginner</option>
+										<input type="number" class="form-input" name="phone" id="phone" placeholder="Phone number"/>
+									</div>
+									<div class="form-group">
+										<input type="email" class="form-input" name="email" id="email" placeholder="Your Email"/>
+									</div>
+									<div class="form-group">
+										<textarea class="form-input" name="address" id="address" placeholder="Your Address"></textarea>
+									</div>
+									<div class="form-group">
+										<select name="state" class="form-input" id="state">
+											<option value="">--Select a State--</option>
+											{% for i in state %}
+											<option value="{{ i.id }}">{{ i.name }}</option>
+											{% endfor %}
 										</select>
 									</div>
 									<div class="form-group">
-										<label>Referred by (first and last name)</label>
-										<input type="text" class="form-input" name="referral" id="referral" placeholder="Who referred you?"/>
+										<input type="password" class="form-input" name="password" id="password" placeholder="Password"/>
+										<span toggle="#password" class="zmdi zmdi-eye field-icon toggle-password"></span>
 									</div>
 									<div class="form-group">
-										<label>Upload your Resume</label>
-										<p class="orange-text">Only PDF files are accepted</p>
-										<input type="file" class="form-input" name="resume" id="resume" placeholder="Who referred you?"/>
+										<input type="password" class="form-input" name="re_password" id="re_password" placeholder="Repeat your password"/>
 									</div>
-								</div>
-								<div class="mt-3">
-									<button class="button btn-navigate-form-step" type="button" step_number="2">Prev</button>
-									<button class="button submit-btn" type="submit">Sign Up</button>
-								</div>
-							</section>
-						</form>
-					</div>
-				</div>
-				<!-- Sign Up Form ends -->
-			</div>
-			<p class="loginhere mt-3 mb-5">
-				Have already an account ? <a href="login.html" class="loginhere-link">Login here</a>
-			</p>
-		</div>
-	</section>
+									<div class="form-group">
+										<select name="gender" class="form-input" id="gender">
+											<option value="">--Select Gender--</option>
+											<option value="Male">Male</option>
+											<option value="Female">Female</option>
+											<option value="Other">Other</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<input type="date" class="form-input" name="date" id="date" placeholder=""/>
+									</div>
+									<div class="form-group">
+										<input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+										<label for="agree-term" class="label-agree-term">
+											<span>
+												<span></span>
+											</span>I agree all statements in  <a href="#" class="term-service">Terms of service</a>
+										</label>
+									</div>
+									<div class="mt-3">
+										<button class="button btn-navigate-form-step" type="button" step_number="2">Next</button>
+									</div>
+								</section>
+								<!-- Step 2 Content, default hidden on page load. -->
+								<section id="step-2" class="form-step d-none">
+									<h2 class="font-normal">Select your <i class="orange-text">primary</i> skill</h2>
+									<!-- Step 2 input fields -->
+									<div class="mt-3">
+										<div class="form-group">
+											<select name="skill" class="form-input" id="skill">
+												<option value="">--Select a Skill--</option>
+												{% for i in skills %}
+												<option value="{{ i.id }}">{{ i.skill }}</option>
+												{% endfor %}
+											</select>
+										</div>
+										<div class="form-group">
+											<h5 class="mb-3">Years of <i class="orange-text">experience</i> with this skill</h5>
+											<div class="form-radio">
+												<input type="radio" name="experience_level" value="newbie" id="newbie" checked="checked" />
+												<label for="newbie">< 1 year</label>
+						
+												<input type="radio" name="experience_level" value="average" id="average"/>
+												<label for="average">2-5 years</label>
 
-</div>
+												<input type="radio" name="experience_level" value="master" id="master" class="mt-2"/>
+												<label for="master">> 6 years</label>
+											</div>
+										</div>
+									</div>
+									<div class="mt-3">
+										<button class="button btn-navigate-form-step" type="button" step_number="1">Prev</button>
+										<button class="button btn-navigate-form-step" type="button" step_number="3">Next</button>
+									</div>
+								</section>
+								<!-- Step 3 Content, default hidden on page load. -->
+								<section id="step-3" class="form-step d-none">
+									<h2 class="font-normal">More about you</h2>
+									<!-- Step 3 input fields -->
+									<div class="mt-3">
+										<div class="form-group">
+											<label class="mb-3">English Proficiency</label>
+											<select name="language" class="form-input form-select" id="gender">
+												<option value="">--Select--</option>
+												<option value="native">Native</option>
+												<option value="advanced">Advanced</option>
+												<option value="intermediate">Intermediate</option>
+												<option value="beginner">Beginner</option>
+											</select>
+										</div>
+										<div class="form-group">
+											<label>Referred by (first and last name)</label>
+											<input type="text" class="form-input" name="referral" id="referral" placeholder="Who referred you?"/>
+										</div>
+										<div class="form-group">
+											<label>Upload your Resume</label>
+											<p class="orange-text">Only PDF files are accepted</p>
+											<input type="file" class="form-input" name="resume" id="resume" placeholder="Who referred you?"/>
+										</div>
+									</div>
+									<div class="mt-3">
+										<button class="button btn-navigate-form-step" type="button" step_number="2">Prev</button>
+										<button class="button submit-btn" type="submit">Sign Up</button>
+									</div>
+								</section>
+							</form>
+						</div>
+					</div>
+					<!-- Sign Up Form ends -->
+                </div>
+				<p class="loginhere mt-3 mb-5">
+					Have already an account ? <a href="/login/" class="loginhere-link">Login here</a>
+				</p>
+            </div>
+        </section>
+
+    </div>
 	
-{% endblock changing %}
+	{% endblock changing %}

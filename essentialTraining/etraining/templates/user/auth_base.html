@@ -1,20 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Forgot Password</title>
+    <title>Sign Up</title>
 
+    
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{ url_for('static',filename='authentication/css/bootstrap-grid.min.css') }}">
 
-   
     <!-- Font Icon -->
     <link rel="stylesheet" href="{{ url_for('static',filename='authentication/fonts/material-icon/css/material-design-iconic-font.min.css') }}">
 
     <!-- Main css -->
     <link rel="stylesheet" href="{{ url_for('static',filename='authentication/css/style.css') }}">
+	<!-- Form css -->
+    <link rel="stylesheet" href="{{ url_for('static',filename='authentication/css/form.css') }}">
     <!-- favicon -->
 	<!-- <link rel="shortcut icon" type="image/png" href="../img/favicon.png"> -->
 	<!-- google font -->
@@ -36,13 +36,11 @@
 	<link rel="stylesheet" href="{{ url_for('static',filename='css/main.css') }}">
 	<!-- responsive -->
 	<link rel="stylesheet" href="{{ url_for('static',filename='css/responsive.css') }}">
-    <!-- Form css -->
-    <link rel="stylesheet" href="{{ url_for('static',filename='authentication/css/form.css') }}">
 </head>
-<body>
+<body class="">
 
-     <!--PreLoader-->
-     <div class="loader">
+    <!--PreLoader-->
+    <div class="loader">
         <div class="loader-inner">
             <div class="circle"></div>
         </div>
@@ -58,7 +56,7 @@
 						<!-- logo -->
 						<div class="site-logo">
 							<a href="/">
-								<img src="{{ url_for('static',filename='img/logo.png') }}" alt="etraining logo">
+								<img src="{{ url_for('static',filename='img/logo.png')}}" alt="">
 							</a>
 						</div>
 						<!-- logo -->
@@ -66,20 +64,19 @@
 						<!-- menu start -->
 						<nav class="main-menu">
 							<ul>
-								<li class="mt-3"><a href="../index.html">Home</a></li>
-								<li class=""><a href="../about.html">About Us</a></li>
-								<li class=""><a href="../contact.html">Contact Us</a></li>
-								<li class=""><a href="../jobs.html">Discover Talent</a></li>
-								<li class=""><a href="signup.html">Job Seekers</a></li>
-								<li class=""><a href="login.html">Profile</a></li>
+								<li class="current-list-item mt-3"><a href="/">Home</a></li>
+								<li><a href="/about/">About Us</a></li>
+								<li><a href="/contact/">Contact Us</a></li>
+								<li><a href="/discover/talent/">Discover Talent</a></li>
+								<li><a href="/signup/">Job Seekers</a></li>
+								<li><a href="/login/">Profile</a></li>
 								<li>
 									<div class="header-icons mt-3">
-										<a class="" href="login.html"> Sign in <i class="fa fa-user-circle fa-lg"></i></a>
+										<a class="current-list-item" href="/login/"> Sign in <i class="fa fa-user-circle fa-lg"></i></a>
 									</div>
 								</li>
 							</ul>
 						</nav>
-						<a class="mobile-show search-bar-icon" href="#"><i class="fas fa-search"></i></a>
 						<div class="mobile-menu"></div>
 						<!-- menu end -->
 					</div>
@@ -101,11 +98,11 @@
                         <div class="footer-box pages">
                             <h2 class="widget-title">Privacy Policy</h2>
                             <ul>
-                                <li><a href="index.html">About Us</a></li>
-                                <li><a href="about.html">Events</a></li>
-                                <li><a href="services.html">Blog</a></li>
-                                <li><a href="news.html">Press Center</a></li>
-                                <li><a href="contact.html">Careers</a></li>
+                                <li><a href="/about/">About Us</a></li>
+                                <li><a href="/">Events</a></li>
+                                <li><a href="/">Blog</a></li>
+                                <li><a href="/">Press Center</a></li>
+                                <li><a href="/jobs/">Careers</a></li>
                             </ul>
                         </div>
 					</div>
@@ -114,10 +111,10 @@
 					<div class="footer-box get-in-touch">
 						<h2 class="widget-title">Find Work</h2>
 						<ul>
-							<li><a href="index.html">For Technologists</a></li>
-                            <li><a href="about.html">Learning Community</a></li>
-                            <li><a href="services.html">Leadership program</a></li>
-                            <li><a href="news.html">Resources</a></li>
+							<li><a href="/jobs/">For Technologists</a></li>
+                            <li><a href="/jobs/">Learning Community</a></li>
+                            <li><a href="/jobs/">Leadership program</a></li>
+                            <li><a href="/jobs/">Resources</a></li>
 						</ul>
 					</div>
 				</div>
@@ -125,11 +122,10 @@
 					<div class="footer-box pages">
 						<h2 class="widget-title">Privacy Policy</h2>
 						<ul>
-							<li><a href="index.html">Terms and Conditions</a></li>
-							<li><a href="about.html">Modern Slavery statements</a></li>
-							<li><a href="services.html">Shop</a></li>
-							<li><a href="news.html">News</a></li>
-							<li><a href="contact.html">Contact</a></li>
+							<li><a href="/">Terms and Conditions</a></li>
+							<li><a href="/">Modern Slavery statements</a></li>
+							<li><a href="/">News</a></li>
+							<li><a href="/contact/">Contact</a></li>
 						</ul>
 					</div>
 				</div>
@@ -153,7 +149,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-6 col-md-12">
-					<p>Copyrights &copy; 2022 - <a href="https://imransdesign.com/">Essential NG</a>,  All Rights Reserved.<br>
+					<p>Copyrights &copy; 2022 - <a href="https:///">Essential NG</a>,  All Rights Reserved.<br>
 					</p>
 				</div>
 				<div class="col-lg-6 text-right col-md-12">
@@ -172,9 +168,9 @@
 	<!-- end copyright -->
 
     <!-- JS -->
-    <script src="{{ url_for('static',filename='authentication/js/bootstrap.bundle.min.js') }}"></script>
-    <script src="{{ url_for('static',filename='authentication/vendor/jquery/jquery.min.js') }}"></script>
-    <script src="{{ url_for('static',filename='authentication/js/main.js') }}"></script>
+    <script src="{{ url_for('static',filename='authentication/') }}js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('static',filename='authentication/') }}vendor/jquery/jquery.min.js"></script>
+    <script src="{{ url_for('static',filename='authentication/') }}js/main.js"></script>
 
     <!-- General JS Files -->
     <!-- jquery -->
@@ -190,41 +186,16 @@
 	<!-- owl carousel -->
 	<script src="{{ url_for('static',filename='js/owl.carousel.min.js') }}"></script>
 	<!-- magnific popup -->
-	<script src="{{ url_for('static',filename='jquery.magnific-popup.min.js') }}"></script>
+	<script src="{{ url_for('static',filename='js/jquery.magnific-popup.min.js') }}"></script>
 	<!-- mean menu -->
 	<script src="{{ url_for('static',filename='js/jquery.meanmenu.min.js') }}"></script>
 	<!-- sticker js -->
 	<script src="{{ url_for('static',filename='js/sticker.js') }}"></script>
 	<!-- main js -->
 	<script src="{{ url_for('static',filename='js/main.js') }}"></script>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <!-- form js -->
+	<!-- form js -->
 	<script src="{{ url_for('static',filename='authentication/js/form.js') }}"></script>
-	
-    <script>
-        $(document).ready(function(){
-            $("#reset_pwd").submit(function(e){
-                if ($.trim($("#email").val()) === "") {
-                    e.preventDefault();
-                    swal({
-                        title: "Oops!",
-                        text: "Please enter a valid or registered email address.",
-                        icon: "warning",
-                        dangerMode: true,
-                    })
-            }else{
-                swal({
-                    title: "Passsword Reset Successfully!",
-                    text: "You have recieved a one time password. Ensure you change your passsword once logged in.",
-                    icon: "success",
-                }).then(function() {
-                    window.location = "login.html";
-                });
-            }
-            })
-        });
-    </script>
-    <script>
+	<script>
 		// Example starter JavaScript for disabling form submissions if there are invalid fields
 		(function () {
 		'use strict'
@@ -237,6 +208,7 @@
 			.forEach(function (form) {
 			form.addEventListener('submit', function (event) {
 				if (!form.checkValidity()) {
+					alert("error")
 				event.preventDefault()
 				event.stopPropagation()
 				}
@@ -248,4 +220,6 @@
 	</script>
 
 </body>
+
 </html>
+    
